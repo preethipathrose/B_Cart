@@ -55,7 +55,6 @@ public class project {
 		List<WebElement> rows=(List<WebElement>) driver.findElements(By.tagName("tr"));
 	}
 	
-
 	@Test(priority=1)
 	public void newProject() {
 		
