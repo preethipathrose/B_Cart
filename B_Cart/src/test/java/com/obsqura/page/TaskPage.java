@@ -55,9 +55,39 @@ public class TaskPage {
 	public WebElement selectFile;
 	
 	@FindBy(xpath="//select[@name='task_status']")
-	public WebElement status;
+	public WebElement taskNameView;
 	
-	@FindBy(xpath="//button[@class='btn btn-sm btn-primary']")
-	public WebElement upload;
+	@FindBy(xpath="//p[@class='form-control-static label label-info  ']")
+	public WebElement taskStatusView;
+	
+	
+	@FindBy(xpath="//*[@id=\"task_details\"]/div/div[1]/h3/text()")
+	public WebElement TaskNameView;
+	
+	@FindBy(xpath="//a[text()='On Hold']")
+	public WebElement onholdStatus;
+	
+	@FindBy(xpath="//a[text()='In Progress']")
+	public WebElement inProgressStatus;
+	
+	@FindBy(xpath="//a[text()='Completed']")
+	public WebElement completedStatus;
+	
+	@FindBy(xpath="//a[text()='Not Started']")
+	public WebElement notStartedStatus;
+	
+	@FindBy(xpath="//a[text()='Deferred']")
+	public WebElement deferredStatus;
+	
+	@FindBy(xpath="//a[text()='Waiting For Someone']")
+	public WebElement waitingStatus;
 		
+	@FindBy(xpath="//button[@class='btn btn-xs btn-success dropdown-toggle']")
+	public WebElement changeStatus;	
+	
+	@FindBy(xpath="//p[@class='form-control-static label label-warning  ']")
+	public WebElement newStatus;
+	
+	@FindBy(xpath="//*[@id='DataTables']/tbody/tr[1]/td[2]//a")
+	public WebElement selectTask;	
 }
